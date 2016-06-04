@@ -23,7 +23,7 @@ Windows|64bit|[1.2 beta]
 - Stream/pipe/load MySQL table data to Amazon-Redshift.
 
 ## How it works
-- Tool connects to source MySQL DB and extracts data to temp file.
+- Script connects to source MySQL DB and extracts data to temp file.
 - File is compressed and uploaded to S3 using multipart upload.
 - Optional upload to Reduced Redundancy storage (not RR by default).
 - Optional "make it public" after upload (private by default).
