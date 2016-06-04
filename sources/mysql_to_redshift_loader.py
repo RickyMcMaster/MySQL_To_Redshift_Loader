@@ -223,26 +223,7 @@ def RepresentsInt(s):
         return True
     except ValueError:
         return False 
-"""
-set PGPASSWORD=Loadtest123
-set PGCLIENTENCODING=UTF8
-set MYSQL_CLIENT_HOME="C:\Program Files\PostgreSQL\9.5"
-set REDSHIFT_CONNECT_STRING="dbname='loadtest' port='5439' user='loadtest' password='Loadtest123' host='loadtest.cxvkqzwtuva2.us-west-2.redshift.amazonaws.com'"  
-psql -U loadtest -h loadtest.cxvkqzwtuva2.us-west-2.redshift.amazonaws.com  -d loadtest -p 5439
 
-cd C:\Python35-32\PROJECTS\MySQL2Redshift
-python mysql_to_redshift_loader.py -q test_query.sql -d "|"  -b pythonuploadtest1 -k mysql_table_export -r -p -o crime_test -m "YYYY-MM-DD HH24:MI:SS" -l 100
-truncate table crime_test;
-
-LOAD DATA  INFILE 'C:/Python35-32/PROJECTS/MySQL2Redshift/Crime.csv' INTO TABLE crime_test
-FIELDS OPTIONALLY ENCLOSED BY '"' TERMINATED BY ','
-LINES TERMINATED BY '\n'
-(Incident_ID,CR_Number,@Dispatch_Date_Time,Class,Class_Description,Police_District_Name,Block_Address,City,State,Zip_Code,Agency,Place,Sector,Beat,PRA,@Start_Date_Time,@End_Date_Time,Latitude,Longitude,Police_District_Number,Location,Address_Number)
-SET Dispatch_Date_Time = STR_TO_DATE(@Dispatch_Date_Time,'%d/%m/%Y %I:%i:%s %p'),
- Start_Date_Time = STR_TO_DATE(@Start_Date_Time,'%d/%m/%Y %I:%i:%s %p'),
- End_Date_Time = STR_TO_DATE(@End_Date_Time,'%d/%m/%Y %I:%i:%s %p');
-
-"""
 
 	
 if __name__ == "__main__":		
