@@ -46,10 +46,8 @@ Usage:
 """
 
 
-#>type c:\tmp\data.csv| python file_upload.py
 import sys
-#data = sys.stdin.readlines()
-#print "Counted", len(data), "lines."
+
 
 import os, sys
 from pprint import pprint
@@ -293,27 +291,18 @@ if __name__ == "__main__":
 			
 	
 	p=None
-	if 	1:
-		__builtin__.g = globals()
-		abspath=os.path.abspath(os.path.dirname(sys.argv[0]))
-		extractor_file = os.path.join(abspath,'include','extractor.py')		
-		extractor=import_module(extractor_file)
-		p=extractor.extract(os.environ)
-		#print cur.fetchall()
-		#print cur.fetchone()
-		#cur.close()
-		#print 1, pipe.getvalue()
-		#e(0)
+	__builtin__.g = globals()
+	abspath=os.path.abspath(os.path.dirname(sys.argv[0]))
+	extractor_file = os.path.join(abspath,'include','extractor.py')		
+	extractor=import_module(extractor_file)
+	p=extractor.extract(os.environ)
 		
 	bucket = conn.get_bucket(opt.s3_bucket_name)
 	sys.stdout.write('Started reading from MySQL (%s sec).\n' % round((time.time() - start_time),2))
 
 	pipe=p
 	s3key=sendStreamGz(bucket, opt.s3_key_name, pipe, suffix='.gz')
-	#p1.wait()
-	#p.wait()
-	#sys.stdout.write('Done reading from Oracle (%s sec).\n' % round((time.time() - start_time),2))
-	#e(0)
+
 	if opt.s3_public:
 		k = Key(bucket)
 		k.key = s3key
