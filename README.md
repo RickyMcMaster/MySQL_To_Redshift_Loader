@@ -1,12 +1,13 @@
 # MySQL-to-Redshift-Data-Loader
     Ground to cloud data integration tool
     Used for ad-hoc query data results load from MySQL to Amazon-Redshift.
-    Works from Windows CLI (command line).
+    
 
 Features:
  - Loads MySQL table (or query) data to Amazon-Redshift.
  - Data stream is compressed while loaded to S3 (and then to Redshift).
  - AWS Access Keys are not passed as arguments. 
+ - Requires MySQL client (mysql.exe)
  - You can modify default Python [extractor.py](https://github.com/alexbuz/MySQL_To_Redshift_Loader/blob/master/sources/include/extractor.py) and [loader.py](https://github.com/alexbuz/MySQL_To_Redshift_Loader/blob/master/sources/include/loader.py)
  - Written using Python/boto/psycopg2/PyInstaller.
 
