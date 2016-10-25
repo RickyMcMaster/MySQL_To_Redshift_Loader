@@ -1,10 +1,13 @@
 """#############################################################################
 #MySQL-to-Redshift Data Loader (v1.2, beta, 04/05/2016 15:11:53) [64bit] 
-#Copyright (c): 2016 Alex Buzunov, Free to use or distribute.
+#Copyright (c): 2016 Alex Buzunov. Free to use, modify, or distribute.
 #Agreement: Use this tool at your own risk. Author is not liable for any damages 
 #           or losses related to the use of this software.
 ################################################################################
 Usage:  
+#---------------------------------------------------------------------- 
+#FreeUkraine #SaveUkraine #StopRussia #PutinKhuilo #CrimeaIsUkraine
+#----------------------------------------------------------------------
   set AWS_ACCESS_KEY_ID=test_key
   set AWS_SECRET_ACCESS_KEY=test_secret_key
   set MYSQL_CLIENT_HOME="C:\Temp\mysql\bin"
