@@ -15,7 +15,7 @@ Usage:
   mysql_to_redshift_loader.exe [<mysql_query_file>] [<mysql_col_delim>] [<mysql_add_header>] 
 			    [<s3_bucket_name>] [<s3_key_name>] [<s3_use_rr>] [<s3_public>]
 	
-	--mysql_query_file -- SQL query to execure in source Oracle db.
+	--mysql_query_file -- SQL query to execure in source MySQL db.
 	--mysql_col_delim  -- CSV column delimiter for downstream(,).
 	--mysql_quote	-- Enclose values in quotes (")
 	--mysql_add_header -- Add header line to CSV file (False).
